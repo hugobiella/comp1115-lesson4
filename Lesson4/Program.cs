@@ -12,6 +12,7 @@ if (quizScore > 1000)
 Console.Write($"Your bonus is {bonus}");
 */
 
+/*
 int round1Score;
 int round2Score;
 
@@ -41,3 +42,33 @@ if (round1Score > 80 && round2Score > 80)
 {
     Console.WriteLine("You've made into the Leaderboard!");
 }
+*/
+
+int difficulty;
+double multiplier;
+string difficultyName;
+
+Console.WriteLine("Enter difficulty: 1-Easy, 2-Medium, 3-Hard");
+difficulty = int.Parse(Console.ReadLine());
+
+switch (difficulty)
+{
+    case 1:
+        difficultyName = "Easy";
+        multiplier = 1;
+        break;
+    case 2:
+        difficultyName = "Medium";
+        multiplier = 1.5;
+        break;
+    case 3:
+        difficultyName = "Hard";
+        multiplier = 2;
+        break;
+    default:
+        difficultyName = "Invalid option";
+        multiplier = 0;
+        break;
+}
+
+Console.WriteLine($"Difficulty: {difficultyName} - {multiplier}x multiplier");
