@@ -44,6 +44,7 @@ if (round1Score > 80 && round2Score > 80)
 }
 */
 
+/*
 int difficulty;
 double multiplier;
 string difficultyName;
@@ -72,3 +73,49 @@ switch (difficulty)
 }
 
 Console.WriteLine($"Difficulty: {difficultyName} - {multiplier}x multiplier");
+*/
+
+string grade = "";
+
+Console.Write("Enter your quiz score (0-100): ");
+
+double QuizScore = double.Parse(Console.ReadLine());
+
+if (QuizScore > 24)
+
+{
+    Console.WriteLine("It's hot!");
+}
+
+else if (QuizScore > 13)
+{
+    Console.WriteLine("It's mild");
+}
+
+else if (QuizScore < 13)
+{
+    Console.WriteLine("It's cool");
+}
+
+if (QuizScore >= 90)
+{
+    grade = "A";
+}
+else if (QuizScore >= 80)
+{
+    grade = "B";
+}
+else if (QuizScore >= 70)
+{
+    grade = "C";
+}
+else if (QuizScore >= 60)
+{
+    grade = "D";
+}
+else
+{
+    grade = "F";
+}
+
+Console.WriteLine($"Your grade: {grade}");
